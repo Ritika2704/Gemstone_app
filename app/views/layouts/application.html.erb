@@ -30,8 +30,9 @@
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav">
                 <li class="active"><%= link_to "Home", home_index_path, class: "navbar-link"%></li>
-                <li class="active"><a href="index.html" class="act">About</a></li>
-                <li class="active"><a href="index.html" class="act">Contact</a></li>
+               
+               <li class="active"><%= link_to "Contact", home_contact_path, class: "navbar-link"%></li>
+                 
 				<li class="active"><%= link_to "Gallery", gallery_index_path, class: "navbar-link"%></li>
                  
                   <% if user_signed_in? %>

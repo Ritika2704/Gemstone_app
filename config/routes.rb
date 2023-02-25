@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post 'admin/login'
   get 'admin/logout'
   get 'home/index'
+  get 'home/contact'
+  post'home/contact'
   devise_for :users
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

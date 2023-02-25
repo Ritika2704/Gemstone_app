@@ -1,5 +1,6 @@
 class PaymentController < ApplicationController
   def checkout
+
     amount_to_charge = session[:amount].to_i
     if request.post?
        ActiveMerchant::Billing::Base.mode = :test
@@ -30,5 +31,14 @@ class PaymentController < ApplicationController
               render :action => "checkout"
             end
     end
+
+      if user_signed_in? 
+         
+       else 
+         flash[:notice]= "Something went wrong."
+         redirect_to root_path
+      end 
+
+      
   end
 end
